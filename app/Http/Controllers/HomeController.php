@@ -31,7 +31,7 @@ class HomeController extends Controller
             'status' => true,
             'certificate_id' => $certificate->certificate_id,
             'is_valid' => $certificate->status,
-            'image' => asset('storage/' . $certificate->certificate_path),
+            'image' => asset('storage/images/uploads/' . basename($certificate->certificate_path)),
             'file_type' => pathinfo($certificate->certificate_path, PATHINFO_EXTENSION),
         ]);
     }

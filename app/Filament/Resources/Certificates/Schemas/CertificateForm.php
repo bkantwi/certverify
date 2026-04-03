@@ -21,8 +21,8 @@ class CertificateForm
                     ->inline(),
                 FileUpload::make('certificate_path')
                     ->required()
-                    ->disk('public')           // store in storage/app/public
-                    ->visibility('public')     // make the file publicly accessible
+                    ->disk('public')
+                    ->directory('images/uploads')
                     ->acceptedFileTypes(['application/pdf']),
             ]);
     }
