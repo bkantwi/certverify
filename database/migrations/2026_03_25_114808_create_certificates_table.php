@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
             $table->text('certificate_id')->nullable();
-            $table->boolean('status')->default(true);
+            $table->boolean('status')->default(true)->nullable();
             $table->text('certificate_path')->nullable();
             $table->timestamps();
         });
