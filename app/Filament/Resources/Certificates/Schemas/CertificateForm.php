@@ -18,6 +18,7 @@ class CertificateForm
                 ToggleButtons::make('status')
                     ->label('Would you like this certificate to be verified?')
                     ->boolean()
+                    ->required()
                     ->inline(),
                 FileUpload::make('certificate_path')
                     ->required()
